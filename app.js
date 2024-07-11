@@ -9,7 +9,7 @@ const app = express();
 const server = createServer(app);
 
 // defining server port 
-const PORT = 3000;
+const PORT = 4001;
 
 // socket io run on http , so we call it with server
 const io = socketIo(server);
@@ -18,7 +18,7 @@ io.on('connection', (socket) => {
     socket.on('send_user_location', (locationCoordinate)=>{
         io.emit('receive_user_location', {id:socket.id , ...locationCoordinate});
     })
-    
+
     socket.on("disconnect",()=>{
         io.emit("user_disconnected",socket.id);
     })
