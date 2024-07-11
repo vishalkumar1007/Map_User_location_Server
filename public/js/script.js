@@ -3,7 +3,7 @@ console.log('step on script : 1.1');
 //     ? 'http://localhost:4001'
 //     : 'https://map-user-location-server.vercel.app';
 
-const socket = io();
+const socket = io('http://localhost:4001', {transports: ['websocket']});
 
 console.log('step on script : 1.2');
 
