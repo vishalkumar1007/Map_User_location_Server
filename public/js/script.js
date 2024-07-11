@@ -1,9 +1,9 @@
 console.log('step on script : 1.1');
-const serverUrl = window.location.hostname === 'localhost'
-    ? 'http://localhost:4001'
-    : 'https://map-user-location-server.vercel.app';
+// const serverUrl = window.location.hostname === 'localhost'
+//     ? 'http://localhost:4001'
+//     : 'https://map-user-location-server.vercel.app';
 
-const socket = io(serverUrl);
+const socket = io();
 
 console.log('step on script : 1.2');
 
