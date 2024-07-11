@@ -1,0 +1,17 @@
+{
+  "name": "map_user_location_server",
+  "version": "1.0.0",
+  "description": "Using socket.io to and other library to know realtime multiple user location.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "backend" : "nodemon app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2",
+    "nodemon": "^3.1.4"
+  }
+}
