@@ -12,9 +12,15 @@ const server = createServer(app);
 const PORT = 4001;
 
 // socket io run on http , so we call it with server
-const io = socketIo(server);
+const io = socketIo(server, {
+    cors: {
+        origin: "*", // Allow all origins for simplicity
+        methods: ["GET", "POST"]
+    }
+});
 
 io.on('connection', (socket) => {
+    console.log('A user connected:', socket.id);
     socket.on('send_user_location', (locationCoordinate)=>{
         io.emit('receive_user_location', {id:socket.id , ...locationCoordinate});
     })
